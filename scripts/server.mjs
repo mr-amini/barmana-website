@@ -34,6 +34,14 @@ const mime = {
 };
 const compressible = new Set([".html", ".css", ".js", ".json", ".svg", ".txt"]);
 
+async function statIfPresent(file) {
+  try {
+    return await stat(file);
+  } catch (error) {
+    if (error.code !== "ENOENT" && error.code !== "ENOTDIR") throw error;
+  }
+}
+
 async function findFile(route) {
   const sources = options.dist ? [{ directory: output, prefix: "" }] : mounts;
   for (const { directory, prefix } of sources) {
@@ -42,10 +50,10 @@ async function findFile(route) {
     let file = path.resolve(directory, relative);
     if (file !== directory && !file.startsWith(directory + path.sep)) continue;
 
-    let metadata = await stat(file, { throwIfNoEntry: false });
+    let metadata = await statIfPresent(file);
     if (metadata?.isDirectory()) {
       file = path.join(file, "index.html");
-      metadata = await stat(file, { throwIfNoEntry: false });
+      metadata = await statIfPresent(file);
     }
     if (metadata?.isFile()) return { file, metadata };
   }

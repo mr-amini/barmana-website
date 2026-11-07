@@ -137,6 +137,10 @@ html[lang="fa"] .bm-nav-group h2 {
     sans-serif;
   direction: inherit;
 }
+.bm-site-footer .bm-language select {
+  padding-right: 8px;
+}
+
 .bm-language select {
   min-height: 44px;
   padding: 8px 32px 8px 12px;
@@ -774,9 +778,20 @@ html:lang(fa)
 #lqd-page-footer-wrap .elementor-element-1106486 {
   display: none !important;
 }
-#banner:has(.container-rig),
-#banner:has(.container-rig) > .e-con-inner {
+#banner:has(.container-rig) {
   overflow: visible !important;
+}
+
+#banner.e-con-boxed {
+  --padding-inline-start: 0px;
+  --padding-inline-end: 0px;
+  padding-inline: 0;
+}
+
+#banner > .e-con-inner {
+  width: 100%;
+  max-width: none;
+  overflow: hidden !important;
 }
 .container-rig > .container-hook {
   position: relative;
@@ -869,9 +884,28 @@ html body .container-scroll-stage > .container-tagline {
   margin-block-end: 0;
 }
 
-.container-scroll-stage > figure {
+#banner .elementor-element-2cb8f36 figure {
   display: block;
-  margin-block-end: 0;
+  width: 50%;
+  margin: 0 auto;
+}
+
+#banner .elementor-element-2cb8f36 figure > img:first-of-type {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1024px) {
+  #banner .elementor-element-2cb8f36 figure {
+    width: 70%;
+  }
+}
+
+@media (max-width: 760px) {
+  #banner .elementor-element-2cb8f36 figure {
+    width: 90%;
+  }
 }
 
 /* Careers footer layout, shared by every route. */
@@ -1061,7 +1095,13 @@ html[lang="fa"]
 }
 html[lang="fa"] main .lqd-btn-icon > svg {
   direction: ltr;
-  scale: 1 1;
+}
+
+/* Mirror the theme's forward arrows without flipping other button icons. */
+html[lang="fa"] .lqd-btn-icon > svg:has(
+  > :is(path[d="M13 5l7 7-7 7"], path[d="M8 6h10v10"])
+) {
+  scale: -1 1;
 }
 
 .mf-checkbox-option label {

@@ -41,7 +41,11 @@
   });
   document.querySelectorAll(".bm-language select").forEach((s) =>
     s.addEventListener("change", () => {
-      if (s.value) location.href = s.value;
+      if (!s.value) return;
+      const language = s.selectedOptions[0].textContent.trim() === "فارسی" ? "fa" : "en";
+      const secure = location.protocol === "https:" ? "; Secure" : "";
+      document.cookie = `bm_language=${language}; Path=/; Max-Age=31536000; SameSite=Lax${secure}`;
+      location.href = s.value;
     }),
   );
 })();
