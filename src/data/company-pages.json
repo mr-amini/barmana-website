@@ -1,0 +1,134 @@
+[
+  {
+    "language": "fa",
+    "route": "/about/",
+    "title": "دربارهٔ بارمانا",
+    "file": "src/pages/about/index.html"
+  },
+  {
+    "language": "fa",
+    "route": "/contact/",
+    "title": "تماس با بارمانا",
+    "file": "src/pages/contact/index.html"
+  },
+  {
+    "language": "fa",
+    "route": "/request-quote/",
+    "title": "درخواست قیمت",
+    "file": "src/pages/request-quote/index.html"
+  },
+  {
+    "language": "fa",
+    "route": "/faq/",
+    "title": "سؤالات متداول",
+    "file": "src/pages/faq/index.html"
+  },
+  {
+    "language": "fa",
+    "route": "/careers/",
+    "title": "فرصت‌های همکاری",
+    "file": "src/pages/careers/index.html"
+  },
+  {
+    "language": "fa",
+    "route": "/services/road-freight/",
+    "title": "حمل زمینی",
+    "file": "src/pages/services/road-freight/index.html"
+  },
+  {
+    "language": "fa",
+    "route": "/services/air-freight/",
+    "title": "حمل هوایی",
+    "file": "src/pages/services/air-freight/index.html"
+  },
+  {
+    "language": "fa",
+    "route": "/services/ocean-freight/",
+    "title": "حمل دریایی",
+    "file": "src/pages/services/ocean-freight/index.html"
+  },
+  {
+    "language": "fa",
+    "route": "/privacy-policy/",
+    "title": "حریم خصوصی",
+    "file": "src/pages/privacy-policy/index.html"
+  },
+  {
+    "language": "fa",
+    "route": "/terms/",
+    "title": "شرایط استفاده",
+    "file": "src/pages/terms/index.html"
+  },
+  {
+    "language": "en",
+    "route": "/en/about/",
+    "title": "About Barmana",
+    "file": "src/pages/en/about/index.html"
+  },
+  {
+    "language": "en",
+    "route": "/en/contact/",
+    "title": "Contact Barmana",
+    "file": "src/pages/en/contact/index.html"
+  },
+  {
+    "language": "en",
+    "route": "/en/request-quote/",
+    "title": "Request a quote",
+    "file": "src/pages/en/request-quote/index.html"
+  },
+  {
+    "language": "en",
+    "route": "/en/faq/",
+    "title": "Frequently asked questions",
+    "file": "src/pages/en/faq/index.html"
+  },
+  {
+    "language": "en",
+    "route": "/en/careers/",
+    "title": "Careers & partnerships",
+    "file": "src/pages/en/careers/index.html"
+  },
+  {
+    "language": "en",
+    "route": "/en/services/road-freight/",
+    "title": "Road freight",
+    "file": "src/pages/en/services/road-freight/index.html"
+  },
+  {
+    "language": "en",
+    "route": "/en/services/air-freight/",
+    "title": "Air freight",
+    "file": "src/pages/en/services/air-freight/index.html"
+  },
+  {
+    "language": "en",
+    "route": "/en/services/ocean-freight/",
+    "title": "Ocean freight",
+    "file": "src/pages/en/services/ocean-freight/index.html"
+  },
+  {
+    "language": "en",
+    "route": "/en/privacy-policy/",
+    "title": "Privacy information",
+    "file": "src/pages/en/privacy-policy/index.html"
+  },
+  {
+    "language": "en",
+    "route": "/en/terms/",
+    "title": "Terms of use",
+    "file": "src/pages/en/terms/index.html"
+  },
+  {
+    "language": "fa",
+    "route": "/team/",
+    "title": "تیم بارمانا",
+    "file": "src/pages/team/index.html"
+  },
+  {
+    "language": "en",
+    "route": "/en/team/",
+    "title": "The Barmana team",
+    "file": "src/pages/en/team/index.html"
+  }
+]

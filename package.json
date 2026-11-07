@@ -1,0 +1,16 @@
+{
+  "name": "barmana-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Barmana bilingual shipping and logistics website",
+  "scripts": {
+    "dev": "node scripts/server.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/server.mjs --dist",
+    "check": "python3 scripts/check.py",
+    "sync:shell": "python3 scripts/apply-shared-shell.py"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

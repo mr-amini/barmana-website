@@ -1,0 +1,174 @@
+.team-page .team-directory {
+  padding-block: clamp(44px, 6vw, 88px);
+}
+
+.team-directory-heading {
+  max-width: 64ch;
+  margin-block-end: 30px;
+}
+
+.team-directory-heading p {
+  margin-block-start: 10px;
+  color: var(--muted);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 28px clamp(12px, 2vw, 28px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.team-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  background: var(--accent);
+}
+
+.team-card h3 {
+  margin-block-start: 15px;
+  font-size: clamp(16px, 1.65vw, 22px);
+}
+
+.team-card p {
+  margin-block: 6px 12px;
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.team-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-block-start: auto;
+}
+
+.team-actions > :is(a, button) {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  color: var(--accent);
+  background: var(--white);
+  border: 1px solid var(--line);
+}
+
+.team-actions a:hover,
+.team-actions a:focus-visible {
+  color: var(--white);
+  background: var(--accent);
+}
+
+.team-actions a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.team-actions button:disabled {
+  color: var(--muted);
+  background: var(--paper);
+  cursor: default;
+}
+
+.team-actions svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (max-width: 1050px) {
+  .team-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 340px) {
+  .team-actions > :is(a, button) {
+    width: 42px;
+  }
+}
+
+.team-portrait {
+  overflow: hidden;
+  background: var(--accent);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes team-enter {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .team-page .hero-intro > * {
+    animation: team-enter 560ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  .team-page .hero-intro h1 {
+    animation-delay: 70ms;
+  }
+
+  .team-page .hero-intro p {
+    animation-delay: 140ms;
+  }
+
+  .team-card-pending {
+    opacity: 0;
+  }
+
+  .team-card-entering {
+    animation: team-enter 580ms cubic-bezier(0.2, 0.7, 0.2, 1)
+      var(--team-delay, 0ms) backwards;
+  }
+
+  .team-card:is(.team-card-pending, .team-card-entering):focus-within {
+    opacity: 1;
+    animation: none;
+  }
+
+  .team-portrait img {
+    transition: transform 450ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+
+  .team-actions a {
+    transition:
+      background-color 180ms ease,
+      color 180ms ease;
+  }
+
+  .team-card:focus-within .team-portrait img {
+    transform: scale(1.045);
+  }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .team-card:hover .team-portrait img {
+    transform: scale(1.045);
+  }
+}
